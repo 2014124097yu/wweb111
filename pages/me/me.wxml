@@ -1,0 +1,52 @@
+<view class="container">
+
+  <view class="avatar" style="display:flex;justify-content:center"> 
+    <view class="img">
+      <image style="width:54px;height:54px" src="/images/avatar.png"></image>
+    </view>
+   <view style="display:flex;flex-direction:column">
+     <text style="color:#fff">camel1059205</text>
+     <text style="color:#A87846">驼客</text>
+   </view>
+  </view>
+
+
+
+  <view class="my-order">
+    <view class="top" style='display:flex;justify-content:space-between'>
+      <text>我的订单</text>
+      <text class="allOrder">查看全部订单></text>
+    </view>
+    <view  style="display:flex;justify-content:space-around" class="bottom">
+      <view wx:for="{{array}}" wx:key="index">
+       <image src="/images/{{item.images}}"></image>
+       <text style="font-size:24rpx">{{item.title}}</text>   
+      </view>
+    </view>
+  </view>
+
+  <view class="my-serve">
+    <view style="padding:10px" class="top">
+      <text>我的服务</text>
+    </view>
+    <view style="display:flex;justify-content:space-around" class="one">
+      <view wx:for="{{array1}}" wx:key="index">
+       <image src="/images/{{item.images}}"></image>
+       <text style="font-size:24rpx">{{item.title}}</text>   
+      </view>
+    </view>
+
+    <view style="display:flex;justify-content:space-around" class="two">
+      <view wx:for="{{array2}}" wx:key="index">
+       <image src="/images/{{item.images}}"></image>
+       <text style="font-size:24rpx">{{item.title}}</text>   
+      </view>
+    </view>
+  </view>
+
+  <view class="back">
+    <button style="font-size:14px;font-weight:normal">退出</button>
+  </view>
+
+</view>
+
